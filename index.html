@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proposta - Sistema de Fortalecimento do Sindicato</title>
+  <title>Proposta de Fortalecimento Institucional do Sindicato</title>
 
   <!-- Logotipo (favicon) -->
   <link rel="icon" type="image/png" href="iconemillennium.png" />
@@ -65,8 +66,8 @@
       position: absolute;
       inset: -40px;
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(0,0,0,0.18), transparent 55%);
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.18), transparent 55%);
       opacity: 0.9;
       pointer-events: none;
     }
@@ -89,9 +90,9 @@
       height: 64px;
       object-fit: contain;
       border-radius: 16px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
       padding: 8px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
     }
 
     .hero-logo-text {
@@ -113,6 +114,15 @@
       opacity: 0.95;
     }
 
+    .hero-taglines {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 12px;
+      font-size: 14px;
+      opacity: 0.95;
+    }
+
     .hero-badge-row {
       display: flex;
       flex-wrap: wrap;
@@ -126,7 +136,7 @@
       gap: 6px;
       padding: 6px 11px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.14);
+      background: rgba(15, 23, 42, 0.14);
       font-size: 12px;
       backdrop-filter: blur(4px);
     }
@@ -152,7 +162,7 @@
       font-weight: 600;
       cursor: default;
       font-size: 14px;
-      box-shadow: 0 12px 30px rgba(15,23,42,0.3);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
     }
 
     .hero-small {
@@ -161,11 +171,11 @@
     }
 
     .hero-right-card {
-      background: rgba(0,0,0,0.14);
+      background: rgba(0, 0, 0, 0.14);
       border-radius: 20px;
       padding: 16px;
       backdrop-filter: blur(16px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -190,7 +200,7 @@
     .hero-metric {
       padding: 10px 10px;
       border-radius: 14px;
-      background: rgba(0,0,0,0.35);
+      background: rgba(0, 0, 0, 0.35);
       display: flex;
       flex-direction: column;
       gap: 2px;
@@ -210,7 +220,7 @@
       margin-top: 10px;
       border-radius: 14px;
       overflow: hidden;
-      background: rgba(15,23,42,0.55);
+      background: rgba(15, 23, 42, 0.55);
       border: 1px solid rgba(148, 163, 184, 0.35);
     }
 
@@ -348,6 +358,13 @@
       margin-top: 10px;
     }
 
+    .grid-cards-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
     .card {
       border-radius: var(--radius-md);
       padding: 14px 13px;
@@ -358,7 +375,7 @@
       gap: 6px;
       font-size: 13px;
       color: #ecfeff;
-      box-shadow: 0 14px 30px rgba(15,23,42,0.18);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
     }
 
     .card-label {
@@ -395,7 +412,7 @@
       font-size: 13px;
       position: relative;
       color: #ecfeff;
-      box-shadow: 0 12px 28px rgba(15,23,42,0.18);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
     }
 
     .timeline-step-label {
@@ -458,6 +475,46 @@
       font-size: 13px;
     }
 
+    /* HIGHLIGHTS BOX */
+    .highlight-box {
+      background: var(--accent-soft);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-top: 14px;
+      font-size: 14px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .highlight-box strong {
+      color: var(--primary);
+    }
+
+    /* RESULTADO GRID */
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .result-item {
+      background: var(--primary-soft);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      text-align: center;
+    }
+
+    .result-icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .result-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
     /* CONTATO / FINAL */
     .contact {
       display: flex;
@@ -487,21 +544,63 @@
       color: var(--muted);
     }
 
+    /* CTA BOX */
+    .cta-box {
+      background: linear-gradient(135deg, #125047 0%, #1a5e79 60%, #00b894 100%);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      color: #fff;
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    .cta-box h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .cta-items {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
+
       .split {
         grid-template-columns: minmax(0, 1fr);
       }
+
       .grid-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .grid-cards-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
       .pricing-grid {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .result-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -509,449 +608,697 @@
       .grid-cards {
         grid-template-columns: minmax(0, 1fr);
       }
+
       .timeline {
         grid-template-columns: minmax(0, 1fr);
       }
+
       .hero {
         padding: 22px 18px;
       }
+
       .hero-title {
         font-size: 24px;
+      }
+
+      .result-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
 </head>
+
 <body>
 
-<div class="page">
+  <div class="page">
 
-  <!-- HERO / CAPA -->
-  <header class="hero">
-    <div class="hero-left">
-      <div class="hero-logo-row">
-        <img src="iconemillennium.png" alt="Logotipo" />
-        <div>
-          <div class="hero-logo-text">Sistema de Fortalecimento Sindical</div>
-          <div style="font-size:13px; opacity:0.9;">Sindicato em primeiro plano, tecnologia nos bastidores</div>
+    <!-- HERO / CAPA -->
+    <header class="hero">
+      <div class="hero-left">
+        <div class="hero-logo-row">
+          <img src="iconemillennium.png" alt="Logotipo" />
+          <div>
+            <div class="hero-logo-text">Sistema de Fortalecimento Sindical</div>
+            <div style="font-size:13px; opacity:0.9;">Millennium 5.0</div>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Proposta de Fortalecimento<br />
+          Institucional do Sindicato
+        </h1>
+
+        <div class="hero-taglines">
+          <span>✨ Mais valor para os filiados.</span>
+          <span>🏛️ Mais relevância institucional.</span>
+          <span>⚙️ Tecnologia e operação trabalhando nos bastidores.</span>
+        </div>
+
+        <div class="hero-badge-row">
+          <div class="pill"><strong>✔</strong> Sindicato protagonista</div>
+          <div class="pill"><strong>🔒</strong> Operação em silêncio</div>
+          <div class="pill"><strong>📈</strong> Resultados reais</div>
+        </div>
+
+        <div class="hero-cta-row">
+          <button class="btn-primary">
+            Sistema completo sob a marca do Sindicato
+          </button>
         </div>
       </div>
 
-      <h1 class="hero-title">
-        Proposta de Plataforma<br />
-        para Fortalecimento do Sindicato
-      </h1>
+      <div class="hero-right">
+        <div class="hero-right-card">
+          <div class="hero-right-title">Resultados esperados com o sistema</div>
 
-      <p class="hero-subtitle">
-        Uma solução completa que fortalece a marca do sindicato, gera valor real
-        para as empresas filiadas e mantém a empresa Master atuando com discrição,
-        sempre nos bastidores.
+          <div class="hero-metrics">
+            <div class="hero-metric">
+              <div class="hero-metric-label">Valor percebido da filiação</div>
+              <div class="hero-metric-value">+↑</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-label">Engajamento e fidelização</div>
+              <div class="hero-metric-value">+↑</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-label">Estrutura interna</div>
+              <div class="hero-metric-value">🔒</div>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="img/img_hero_sindicato_sistema.jpg" alt="Dashboard do sistema de fortalecimento sindical" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. CONTEXTO E OBJETIVO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">1</span>
+          Contexto e Objetivo da Proposta
+        </div>
+        <div class="section-tag">Desafio e Solução</div>
+      </div>
+
+      <div class="split">
+        <div>
+          <p class="section-lead">
+            Os sindicatos modernos enfrentam o desafio de entregar valor prático e contínuo
+            às empresas filiadas, indo além da representação institucional tradicional.
+          </p>
+
+          <p style="font-size: 14px; margin-bottom: 12px;">
+            Esta proposta apresenta um <strong>Sistema de Fortalecimento Sindical</strong>, cujo objetivo é:
+          </p>
+
+          <ul class="list">
+            <li>Reforçar o sindicato como protagonista na relação com os filiados</li>
+            <li>Ampliar o valor percebido da filiação</li>
+            <li>Gerar engajamento, fidelização e crescimento da base</li>
+            <li>Estruturar serviços, campanhas e indicadores de forma profissional</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>💡 Tudo isso sem aumentar a estrutura interna do sindicato.</strong>
+          </div>
+        </div>
+        <div>
+          <img class="topic-image" src="img/img_introducao_sindicato.jpg"
+            alt="Reunião do sindicato com empresas filiadas" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. IDEIA CENTRAL DO MODELO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">2</span>
+          A Ideia Central do Modelo
+        </div>
+        <div class="section-tag">Conceito</div>
+      </div>
+
+      <p class="section-lead">
+        👉 O sindicato passa a oferecer uma estrutura completa de serviços, benefícios, mentorias,
+        campanhas e inteligência de dados sob sua própria marca, enquanto uma empresa especializada
+        realiza todo o trabalho operacional e técnico nos bastidores.
       </p>
 
-      <div class="hero-badge-row">
-        <div class="pill"><strong>✔</strong> Sindicato como protagonista</div>
-        <div class="pill"><strong>✔</strong> Master nos bastidores</div>
-        <div class="pill"><strong>✔</strong> Foco em resultados para as empresas</div>
-      </div>
-
-      <div class="hero-cta-row">
-        <button class="btn-primary">
-          Proposta alinhada à identidade do Sindicato
-        </button>
-        <span class="hero-small">
-          Sistema, mentorias, campanhas e indicadores sob a marca do sindicato.
-        </span>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="hero-right-card">
-        <div class="hero-right-title">Resultados esperados com o sistema</div>
-
-        <div class="hero-metrics">
-          <div class="hero-metric">
-            <div class="hero-metric-label">Percepção de valor do sindicato</div>
-            <div class="hero-metric-value">+↑</div>
+      <div class="pricing-grid">
+        <div class="pricing-highlight">
+          <h3>🏛️ O Sindicato aparece</h3>
+          <div class="pricing-tagline">
+            Lidera e recebe os créditos por todas as iniciativas
           </div>
-          <div class="hero-metric">
-            <div class="hero-metric-label">Engajamento das empresas filiadas</div>
-            <div class="hero-metric-value">+↑</div>
+          <div class="pricing-line">
+            Protagonista na relação com as empresas filiadas
           </div>
-          <div class="hero-metric">
-            <div class="hero-metric-label">Visibilidade da Master</div>
-            <div class="hero-metric-value">🔒</div>
+          <div class="pricing-line">
+            Todas as comunicações em nome do sindicato
+          </div>
+          <div class="pricing-line">
+            Reconhecimento total pela entrega de valor
           </div>
         </div>
 
-        <div class="hero-image">
-          <img
-            src="img_hero_sindicato_sistema.jpg"
-            alt="Dashboard do sistema de fortalecimento sindical"
-          />
+        <div class="pricing-conditions">
+          <h3 style="margin: 0 0 8px; color: var(--primary);">🔒 A Operação acontece em silêncio</h3>
+          <ul class="list">
+            <li>Profissionalismo e eficiência nos bastidores</li>
+            <li>Tecnologia, dados e campanhas executadas pela Millennium 5.0</li>
+            <li>Sem exposição da operadora para os filiados</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- 1. INTRODUÇÃO -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">1</span>
-        Introdução
+    <!-- 3. O QUE É O SISTEMA -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">3</span>
+          O que é o Sistema de Fortalecimento Sindical
+        </div>
+        <div class="section-tag">Visão Geral</div>
       </div>
-      <div class="section-tag">Objetivo da Proposta</div>
-    </div>
 
-    <div class="split">
-      <div>
-        <p class="section-lead">
-          O objetivo deste sistema é fortalecer o sindicato como protagonista na
-          relação com as empresas filiadas, agregando valor com serviços estruturados,
-          tecnologia e inteligência, sem que a empresa Master apareça na frente.
-        </p>
+      <p class="section-lead">
+        Trata-se de uma plataforma integrada, combinada a uma operação contínua, que permite ao sindicato:
+      </p>
 
-        <ul class="list">
-          <li>Manter a identidade e a marca do sindicato em primeiro plano.</li>
-          <li>Entregar benefícios concretos e contínuos às empresas filiadas.</li>
-          <li>Contar com uma operação profissional nos bastidores (empresa Master).</li>
-        </ul>
-
-        <div class="chips-row">
-          <span class="chip-outline">Sindicato protagonista</span>
-          <span class="chip-outline">Master nos bastidores</span>
-          <span class="chip-outline">Valor contínuo às empresas</span>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-icon">📋</div>
+          <div class="result-label">Organizar e atender sua base de filiados</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🎯</div>
+          <div class="result-label">Criar campanhas e benefícios recorrentes</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🎓</div>
+          <div class="result-label">Oferecer mentorias e capacitação contínua</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">📊</div>
+          <div class="result-label">Medir satisfação, engajamento e resultados</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🧠</div>
+          <div class="result-label">Gerar inteligência para decisões estratégicas</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🏛️</div>
+          <div class="result-label">Tudo como iniciativa oficial do sindicato</div>
         </div>
       </div>
-      <div>
-        <img
-          class="topic-image"
-          src="img_introducao_sindicato.jpg"
-          alt="Reunião do sindicato com empresas filiadas"
-        />
+    </section>
+
+    <!-- 4. SERVIÇOS INCLUÍDOS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">4</span>
+          Serviços Incluídos no Sistema
+        </div>
+        <div class="section-tag">Funcionalidades</div>
       </div>
-    </div>
-  </section>
 
-  <!-- 2. BENEFÍCIOS DO SISTEMA -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">2</span>
-        Benefícios do Sistema
-      </div>
-      <div class="section-tag">Valor Entregue na Prática</div>
-    </div>
+      <!-- 4.1 Operação e Serviços -->
+      <h3 style="font-size: 16px; color: var(--primary); margin: 0 0 12px;">4.1 Operação e Serviços às Empresas Filiadas
+      </h3>
 
-    <p class="section-lead">
-      O sistema foi desenhado para que o sindicato ofereça um conjunto robusto
-      de serviços às empresas filiadas, mantendo sua marca em evidência, enquanto
-      a empresa Master opera com discrição e eficiência.
-    </p>
-
-    <!-- Sub-benefícios em cards -->
-    <div class="grid-cards">
-
-      <!-- 2.1 Cadastro de Empresas Filiadas -->
-      <article class="card">
-        <div class="card-label">Gestão</div>
-        <div class="card-title">Cadastro de Empresas Filiadas</div>
-        <div class="card-body">
-          Gestão completa das empresas filiadas, com histórico, dados de contato,
-          participação em campanhas e uso dos benefícios, sem expor a empresa Master.
-        </div>
-      </article>
-
-      <!-- 2.2 Pesquisa e Mediação -->
-      <article class="card">
-        <div class="card-label">Relacionamento</div>
-        <div class="card-title">Pesquisa de Satisfação &amp; Mediação Comercial</div>
-        <div class="card-body">
-          Coleta de feedback estruturado e mediação de eventuais conflitos,
-          sempre em nome do sindicato, reforçando sua imagem como defensor
-          dos interesses da base.
-        </div>
-      </article>
-
-      <!-- 2.3 Conversão de Vendas -->
-      <article class="card">
-        <div class="card-label">Negócios</div>
-        <div class="card-title">Conversão de Vendas</div>
-        <div class="card-body">
-          Suporte nos bastidores para transformar oportunidades em vendas,
-          com processos e campanhas coordenados pela Master, mas com o sindicato
-          como protagonista nas comunicações.
-        </div>
-      </article>
-
-      <!-- 2.4 Painel de Indicadores -->
-      <article class="card">
-        <div class="card-label">Inteligência</div>
-        <div class="card-title">Painel de Indicadores</div>
-        <div class="card-body">
-          Análises e comparativos entre empresas, preservando a identidade
-          quando necessário, sempre apresentados em nome do sindicato.
-        </div>
-      </article>
-
-      <!-- 2.5 Mentorias Semanais -->
-      <article class="card">
-        <div class="card-label">Desenvolvimento</div>
-        <div class="card-title">Mentorias Semanais</div>
-        <div class="card-body">
-          Conteúdo, orientação e conhecimento recorrente para as empresas,
-          entregue pela equipe Master, mas posicionado como iniciativa
-          oficial do sindicato.
-        </div>
-      </article>
-
-      <!-- 2.6 Campanhas com Fornecedores -->
-      <article class="card">
-        <div class="card-label">Benefícios</div>
-        <div class="card-title">Campanhas com Fornecedores Parceiros</div>
-        <div class="card-body">
-          Descontos, condições especiais e oportunidades comerciais
-          negociadas pela Master e comunicadas em nome do sindicato,
-          aumentando o valor percebido pelas empresas filiadas.
-        </div>
-      </article>
-    </div>
-
-    <div style="margin-top:18px; display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1.3fr); gap:18px; align-items:center;">
-      <div>
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <div class="benefit-icon">📊</div>
-            <div>
-              <strong>Visão estratégica do ecossistema</strong><br />
-              Entendimento claro do engajamento, satisfação e resultados gerados
-              para as empresas filiadas.
-            </div>
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-label">Atendimento</div>
+          <div class="card-title">Central de Solicitações</div>
+          <div class="card-body">
+            Canal oficial do sindicato para atendimento de pedidos, demandas e solicitações,
+            garantindo organização, histórico e resposta estruturada.
           </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🤝</div>
-            <div>
-              <strong>Relação mais forte com a base</strong><br />
-              O sindicato passa a ser reconhecido como fonte de apoio,
-              negócios e desenvolvimento contínuo.
-            </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Engajamento</div>
+          <div class="card-title">Gestão de Campanhas</div>
+          <div class="card-body">
+            Organização de campanhas de benefícios, ações com parceiros e iniciativas
+            de engajamento conduzidas em nome do sindicato.
           </div>
-        </div>
-      </div>
-      <div>
-        <img
-          class="topic-image"
-          src="img_beneficios_sistema.jpg"
-          alt="Representação dos benefícios do sistema para o sindicato"
-        />
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <!-- 3. CONEXÃO ENTRE SINDICATOS -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">3</span>
-        Conexão entre Sindicatos
-      </div>
-      <div class="section-tag">Ecossistema Integrado</div>
-    </div>
-
-    <div class="split">
-      <div>
-        <p class="section-lead">
-          A plataforma permite integrar diferentes sindicatos em um mesmo ambiente,
-          preservando a identidade de cada um, mas criando sinergias e novas
-          oportunidades de negócios para as empresas de toda a rede.
-        </p>
-
-        <ul class="list">
-          <li>Intercâmbio de boas práticas entre sindicatos.</li>
-          <li>Parcerias com fornecedores que atendem múltiplos segmentos.</li>
-          <li>Conexão entre empresas de setores complementares.</li>
-        </ul>
-
-        <div class="chips-row">
-          <span class="chip-outline">Rede de sindicatos</span>
-          <span class="chip-outline">Oportunidades cruzadas</span>
-          <span class="chip-outline">Base ampliada</span>
-        </div>
-      </div>
-      <div>
-        <img
-          class="topic-image"
-          src="img_conexao_sindicatos.jpg"
-          alt="Integração entre diferentes sindicatos"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. MODELO DE NEGÓCIO -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">4</span>
-        Modelo de Negócio
-      </div>
-      <div class="section-tag">Sustentabilidade &amp; Parceria</div>
-    </div>
-
-    <p class="section-lead">
-      O modelo financeiro foi desenhado para ser simples, transparente e alinhado
-      ao fortalecimento do sindicato, com a Master operando sempre em segundo plano.
-    </p>
-
-    <div class="pricing-grid">
-      <div class="pricing-highlight">
-        <h3>Fluxo de Mensalidade</h3>
-        <div class="pricing-tagline">
-          Empresas filiadas contribuem com o sindicato, que repassa uma parcela à Master.
-        </div>
-
-        <div class="pricing-line">
-          <strong>1.</strong> As empresas filiadas pagam uma mensalidade ao sindicato
-          pelo uso do sistema e acesso aos benefícios.
-        </div>
-        <div class="pricing-line">
-          <strong>2.</strong> O sindicato concentra a relação comercial direta com as empresas.
-        </div>
-        <div class="pricing-line">
-          <strong>3.</strong> Uma parte dessa mensalidade é destinada à empresa Master,
-          que opera todo o sistema e a inteligência por trás.
-        </div>
-
-        <div class="pricing-note">
-          Esse modelo garante que o sindicato seja o protagonista da relação
-          e tenha uma fonte de receita recorrente atrelada ao valor entregue à base.
-        </div>
-      </div>
-
-      <div class="pricing-conditions">
-        <strong>Pontos-chave do modelo:</strong>
-        <ul class="list">
-          <li>O sindicato é o único interlocutor oficial para as empresas filiadas.</li>
-          <li>A Master não aparece como fornecedora direta para a base.</li>
-          <li>Os incentivos da Master estão alinhados ao crescimento do sindicato.</li>
-        </ul>
-        <p style="font-size:12px; color:var(--muted); margin-top:4px;">
-          Detalhes de valores, percentuais de repasse e condições específicas
-          podem ser definidos em conjunto, conforme o porte do sindicato e
-          o número de empresas filiadas.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. DIFERENCIAIS COMPETITIVOS -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">5</span>
-        Diferenciais Competitivos
-      </div>
-      <div class="section-tag">O que Torna a Proposta Única</div>
-    </div>
-
-    <div class="split">
-      <div>
-        <p class="section-lead">
-          A combinação de tecnologia, operação discreta da Master e protagonismo
-          institucional do sindicato cria uma proposta de valor difícil de replicar.
-        </p>
-
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <div class="benefit-icon">👀</div>
-            <div>
-              <strong>Discrição &amp; Eficiência</strong><br />
-              A empresa Master atua nos bastidores, garantindo processos,
-              campanhas e indicadores, enquanto o sindicato aparece como
-              o grande responsável por todos os benefícios.
-            </div>
+        <article class="card">
+          <div class="card-label">Desenvolvimento</div>
+          <div class="card-title">Gestão de Mentorias</div>
+          <div class="card-body">
+            Estruturação de mentorias, treinamentos e workshops recorrentes,
+            posicionando o sindicato como agente ativo de desenvolvimento empresarial.
           </div>
+        </article>
 
-          <div class="benefit-item">
-            <div class="benefit-icon">🏛️</div>
-            <div>
-              <strong>Fortalecimento do Sindicato</strong><br />
-              A proposta foi desenhada para atrair mais empresas filiadas,
-              aumentar o engajamento e posicionar o sindicato como fonte
-              de oportunidades e apoio constante.
-            </div>
+        <article class="card">
+          <div class="card-label">Satisfação</div>
+          <div class="card-title">Gestão de NPS</div>
+          <div class="card-body">
+            Coleta estruturada da percepção dos filiados, permitindo escuta ativa,
+            melhoria contínua e mediação institucional.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Negócios</div>
+          <div class="card-title">Recuperação de Vendas</div>
+          <div class="card-body">
+            Apoio nos bastidores para recuperação de oportunidades comerciais,
+            fortalecendo o resultado financeiro das empresas filiadas.
+          </div>
+        </article>
+      </div>
+
+      <!-- 4.2 Gestão da Rede -->
+      <h3 style="font-size: 16px; color: var(--primary); margin: 24px 0 12px;">4.2 Gestão da Rede Sindical</h3>
+
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-label">Cadastro</div>
+          <div class="card-title">Rede e Filiados</div>
+          <div class="card-body">
+            Cadastro completo, histórico e acompanhamento da participação das empresas
+            filiadas nos serviços e benefícios do sindicato.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Estrutura</div>
+          <div class="card-title">Organizações</div>
+          <div class="card-body">
+            Gestão de estruturas vinculadas (núcleos, regionais, entidades parceiras),
+            permitindo crescimento organizado.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Segurança</div>
+          <div class="card-title">Usuários do Sistema</div>
+          <div class="card-body">
+            Controle de acesso e perfis de dirigentes e equipes administrativas,
+            garantindo segurança institucional.
+          </div>
+        </article>
+      </div>
+
+      <!-- 4.3 Financeiro e Produtos -->
+      <h3 style="font-size: 16px; color: var(--primary); margin: 24px 0 12px;">4.3 Financeiro e Produtos</h3>
+
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-label">Controle</div>
+          <div class="card-title">Gestão Financeira</div>
+          <div class="card-body">
+            Controle das mensalidades, receitas vinculadas ao sistema e repasses operacionais,
+            garantindo transparência.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Oferta</div>
+          <div class="card-title">Catálogo de Produtos e Serviços</div>
+          <div class="card-body">
+            Organização clara dos serviços, campanhas, programas e benefícios
+            oferecidos pelo sindicato.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Parcerias</div>
+          <div class="card-title">Empresas Parceiras</div>
+          <div class="card-body">
+            Gestão de fornecedores e parceiros estratégicos, viabilizando melhores
+            condições comerciais aos filiados.
+          </div>
+        </article>
+      </div>
+
+      <!-- 4.4 Inteligência -->
+      <h3 style="font-size: 16px; color: var(--primary); margin: 24px 0 12px;">4.4 Inteligência e Indicadores</h3>
+
+      <div class="grid-cards-2">
+        <article class="card">
+          <div class="card-label">Estratégia</div>
+          <div class="card-title">KPIs e Indicadores</div>
+          <div class="card-body">
+            Painel estratégico com dados de engajamento, satisfação, uso dos serviços
+            e resultados gerados para a base sindical.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. OPERAÇÃO E PAPEL DA MILLENNIUM 5.0 -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">5</span>
+          Operação e Papel da Millennium 5.0
+        </div>
+        <div class="section-tag">Execução</div>
+      </div>
+
+      <p class="section-lead">
+        Todo o trabalho técnico, operacional e de execução do Sistema de Fortalecimento Sindical
+        será realizado pela equipe <strong>Millennium 5.0</strong>, empresa especializada em tecnologia,
+        dados, campanhas, mentorias e estruturação de serviços.
+      </p>
+
+      <div class="split">
+        <div>
+          <p style="font-size: 14px; margin-bottom: 12px;">
+            <strong>A Millennium 5.0 será responsável por:</strong>
+          </p>
+
+          <ul class="list">
+            <li>Operar a plataforma e os sistemas</li>
+            <li>Executar campanhas e ações</li>
+            <li>Organizar mentorias e conteúdos</li>
+            <li>Gerenciar dados, indicadores e relatórios</li>
+            <li>Apoiar negociações com parceiros</li>
+            <li>Garantir funcionamento contínuo e qualidade operacional</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>🔒 Essa atuação ocorre integralmente nos bastidores, sem exposição
+              da empresa Millennium 5.0 para as empresas filiadas.</strong>
           </div>
         </div>
+        <div>
+          <img class="topic-image" src="img/img_beneficios_sistema.jpg"
+            alt="Operação da Millennium 5.0 nos bastidores" />
+        </div>
       </div>
-      <div>
-        <img
-          class="topic-image"
-          src="img_diferenciais_competitivos.jpg"
-          alt="Diferenciais competitivos do sistema para o sindicato"
-        />
+    </section>
+
+    <!-- 6. PROTAGONISMO E CRÉDITOS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">6</span>
+          Protagonismo e Créditos do Sindicato
+        </div>
+        <div class="section-tag">Reconhecimento</div>
       </div>
-    </div>
-  </section>
 
-  <!-- 6. CONCLUSÃO -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-title">
-        <span class="section-title-badge">6</span>
-        Conclusão
+      <p class="section-lead">
+        Apesar da operação ser realizada pela Millennium 5.0:
+      </p>
+
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-icon">🏛️</div>
+          <div class="result-label">O sindicato é o único rosto institucional</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">📣</div>
+          <div class="result-label">Todas as iniciativas são comunicadas pelo sindicato</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🏆</div>
+          <div class="result-label">O reconhecimento e os créditos são totalmente do sindicato</div>
+        </div>
       </div>
-      <div class="section-tag">Impacto &amp; Próximos Passos</div>
-    </div>
 
-    <div class="split">
-      <div>
-        <p class="section-lead">
-          O sistema proposto representa uma estratégia de fortalecimento institucional
-          do sindicato, combinando transparência, valor agregado e oportunidade de
-          crescimento conjunto para o sindicato e suas empresas filiadas.
-        </p>
+      <div class="highlight-box" style="text-align: center; margin-top: 20px;">
+        <strong>🏛️ O sindicato se consolida como provedor de serviços, defensor da base
+          e agente de resultados reais.</strong>
+      </div>
+    </section>
 
-        <ul class="list">
-          <li>Mais valor percebido pelas empresas filiadas.</li>
-          <li>Dados e indicadores para decisões mais assertivas.</li>
-          <li>Campanhas, mentorias e benefícios sob a marca do sindicato.</li>
-          <li>Master atuando com profissionalismo e discrição nos bastidores.</li>
-        </ul>
+    <!-- 7. RESULTADO REAL PARA OS FILIADOS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">7</span>
+          Resultado Real para os Filiados
+        </div>
+        <div class="section-tag">Benefícios Concretos</div>
+      </div>
 
-        <p style="font-size:14px;">
-          O próximo passo sugerido é uma reunião de alinhamento para ajustar
-          detalhes do modelo, cronograma de implantação e definição dos primeiros
-          grupos de empresas a serem integradas ao sistema.
-        </p>
+      <p class="section-lead">
+        Com a estrutura profissional operando nos bastidores, o sindicato passa a entregar benefícios concretos:
+      </p>
 
-        <div class="contact">
+      <div class="benefits-grid" style="margin-top: 16px;">
+        <div class="benefit-item">
+          <div class="benefit-icon">📋</div>
           <div>
-            <div class="contact-block-title">Contato</div>
-            <div class="contact-main">[nome do responsável]</div>
-            <div class="contact-small">
-              E-mail: [email do sindicato ou da Master para contato interno]<br />
-              Telefone / WhatsApp: [telefone]
-            </div>
+            <strong>Apoio contínuo à gestão das empresas</strong><br />
+            Suporte estruturado para as operações diárias
           </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🎓</div>
           <div>
-            <div class="contact-block-title">Próximo Passo</div>
-            <div class="contact-small">
-              Agendar uma apresentação detalhada da plataforma e da jornada
-              de implantação, com foco nas necessidades específicas do sindicato.
-            </div>
+            <strong>Capacitação recorrente</strong><br />
+            Mentorias e treinamentos constantes
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <div>
+            <strong>Benefícios comerciais reais</strong><br />
+            Condições especiais com parceiros
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📈</div>
+          <div>
+            <strong>Geração e recuperação de negócios</strong><br />
+            Oportunidades comerciais ativas
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🤝</div>
+          <div>
+            <strong>Mediação institucional estruturada</strong><br />
+            Resolução de conflitos profissional
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📊</div>
+          <div>
+            <strong>Acompanhamento por indicadores claros</strong><br />
+            Visibilidade de resultados e progresso
           </div>
         </div>
       </div>
-      <div>
-        <img
-          class="topic-image"
-          src="img_conclusao_sindicato.jpg"
-          alt="Conclusão da proposta de fortalecimento sindical"
-        />
-      </div>
-    </div>
-  </section>
 
-</div>
+      <div class="highlight-box" style="text-align: center; margin-top: 20px;">
+        <strong>💡 Isso transforma a filiação em valor prático no dia a dia das empresas.</strong>
+      </div>
+    </section>
+
+    <!-- 8. FIDELIZAÇÃO E CRESCIMENTO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">8</span>
+          Fidelização e Crescimento Contínuo
+        </div>
+        <div class="section-tag">Sustentabilidade</div>
+      </div>
+
+      <p class="section-lead">
+        A entrega constante de resultados gera:
+      </p>
+
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-icon">🔄</div>
+          <div class="result-label">Maior retenção das empresas filiadas</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">⬇️</div>
+          <div class="result-label">Redução de evasão</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">⚡</div>
+          <div class="result-label">Aumento do engajamento</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">📈</div>
+          <div class="result-label">Crescimento sustentável da base sindical</div>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="text-align: center; margin-top: 20px;">
+        <strong>📈 O sindicato fortalece sua relevância política, institucional e econômica de forma contínua.</strong>
+      </div>
+    </section>
+
+    <!-- 9. MODELO FINANCEIRO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">9</span>
+          Modelo Financeiro e Sustentabilidade
+        </div>
+        <div class="section-tag">Economia</div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-highlight">
+          <h3>Fluxo Financeiro</h3>
+          <div class="pricing-tagline">
+            Modelo simples, transparente e alinhado ao crescimento
+          </div>
+
+          <div class="pricing-line">
+            <strong>1.</strong> As empresas filiadas contribuem financeiramente com o sindicato
+          </div>
+          <div class="pricing-line">
+            <strong>2.</strong> O sindicato centraliza integralmente a relação comercial
+          </div>
+          <div class="pricing-line">
+            <strong>3.</strong> Parte do valor é destinada à Millennium 5.0 pela operação do sistema
+          </div>
+        </div>
+
+        <div class="pricing-conditions">
+          <strong>Características do modelo:</strong>
+          <ul class="list">
+            <li>✅ Simples</li>
+            <li>✅ Transparente</li>
+            <li>✅ Alinhado ao crescimento do sindicato</li>
+          </ul>
+          <p style="font-size:12px; color:var(--muted); margin-top:8px;">
+            Os valores e percentuais são definidos em conjunto,
+            respeitando o porte do sindicato.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CONEXÃO ENTRE SINDICATOS -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">10</span>
+          Conexão entre Sindicatos (Opcional)
+        </div>
+        <div class="section-tag">Ecossistema</div>
+      </div>
+
+      <div class="split">
+        <div>
+          <p class="section-lead">
+            O sistema permite, se desejado:
+          </p>
+
+          <ul class="list">
+            <li>Integração entre diferentes sindicatos</li>
+            <li>Preservação da identidade de cada entidade</li>
+            <li>Ampliação de parcerias e oportunidades para os filiados</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>🌐 Cada sindicato forte individualmente, conectado a um ecossistema maior.</strong>
+          </div>
+        </div>
+        <div>
+          <img class="topic-image" src="img/img_conexao_sindicatos.jpg" alt="Integração entre diferentes sindicatos" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CONCLUSÃO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">11</span>
+          Conclusão
+        </div>
+        <div class="section-tag">Resumo</div>
+      </div>
+
+      <p class="section-lead">
+        Esta proposta representa uma estratégia moderna de fortalecimento institucional, na qual:
+      </p>
+
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-icon">🏛️</div>
+          <div class="result-label">O sindicato lidera</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🎯</div>
+          <div class="result-label">Os filiados recebem resultados reais</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">⚙️</div>
+          <div class="result-label">A operação é profissional e escalável</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🔇</div>
+          <div class="result-label">A tecnologia trabalha em silêncio</div>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="text-align: center; margin-top: 20px;">
+        <strong>🏆 O resultado é um sindicato mais forte, relevante e com uma base fiel.</strong>
+      </div>
+    </section>
+
+    <!-- 12. PRÓXIMO PASSO -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-title-badge">12</span>
+          Próximo Passo
+        </div>
+        <div class="section-tag">Ação</div>
+      </div>
+
+      <div class="cta-box">
+        <h3>📅 Agendar reunião de alinhamento para:</h3>
+        <div class="cta-items">
+          <div class="cta-item">
+            <span>✓</span>
+            <span>Ajustes finais do modelo</span>
+          </div>
+          <div class="cta-item">
+            <span>✓</span>
+            <span>Definição de cronograma</span>
+          </div>
+          <div class="cta-item">
+            <span>✓</span>
+            <span>Seleção do grupo inicial de filiados</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact" style="margin-top: 24px;">
+        <div>
+          <div class="contact-block-title">Contato</div>
+          <div class="contact-main">Millennium 5.0</div>
+          <div class="contact-small">
+            Entre em contato para agendar
+          </div>
+        </div>
+        <div>
+          <div class="contact-block-title">Próximo Passo</div>
+          <div class="contact-small">
+            Agendar uma apresentação detalhada da plataforma e da jornada
+            de implantação, com foco nas necessidades específicas do sindicato.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
 
 </body>
+
 </html>
